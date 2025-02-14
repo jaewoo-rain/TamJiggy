@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tam_jiggy/home/taps/home_screen/route/search_page/search_bloc.dart';
-import 'package:tam_jiggy/home/taps/home_screen/route/search_page/search_screen.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/route/search_page/search_bloc.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/route/search_page/search_screen.dart';
 
 class TravelSearchBar extends StatelessWidget {
   @override

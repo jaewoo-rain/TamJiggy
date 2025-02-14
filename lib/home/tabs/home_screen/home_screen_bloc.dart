@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tam_jiggy/home/taps/home_screen/home_screen_event.dart';
-import 'package:tam_jiggy/home/taps/home_screen/home_screen_state.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/home_screen_event.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/home_screen_state.dart';
 
 class HomeScreenBloc extends Bloc<HomeScreenEvent, HomeScreenState> {
   HomeScreenBloc() : super(TravelInitial()) {

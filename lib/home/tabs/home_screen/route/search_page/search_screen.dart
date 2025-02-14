@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tam_jiggy/home/taps/home_screen/route/search_page/search_bloc.dart';
-import 'package:tam_jiggy/home/taps/home_screen/route/search_page/search_event.dart';
-import 'package:tam_jiggy/home/taps/home_screen/route/search_page/search_state.dart';
-import 'package:tam_jiggy/home/taps/home_screen/route/search_page/widgets/calender_widget.dart';
-import 'package:tam_jiggy/home/taps/home_screen/route/search_page/widgets/map_widget.dart';
-import 'package:tam_jiggy/home/taps/home_screen/route/search_page/widgets/people_select_widget.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/route/search_page/search_bloc.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/route/search_page/search_event.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/route/search_page/search_state.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/route/search_page/tabs/calender/calender_page.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/route/search_page/tabs/map/map_page.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/route/search_page/tabs/people_select/people_select_page.dart';
 
 class SearchPage extends StatefulWidget {
   @override
@@ -21,7 +21,7 @@ class _SearchPageState extends State<SearchPage> {
       isScrollControlled: true,
       builder: (context) {
         return Container(
-          height: MediaQuery.of(context).size.height * 0.6,
+          height: MediaQuery.of(context).size.height * 0.7,
           child: content,
         );
       },
@@ -91,20 +91,32 @@ class _SearchPageState extends State<SearchPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton.icon(
-                  onPressed: () => showBottomSheet(context, CalendarWidget()),
+                  onPressed: () => showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    builder: (context) => CalendarPage(),
+                  ),
                   icon: Icon(Icons.calendar_today),
                   label: Text("일정"),
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                 ),
+                // PeopleSelectWidget를 바텀시트로 호출
                 ElevatedButton.icon(
-                  onPressed: () =>
-                      showBottomSheet(context, PeopleSelectWidget()),
+                  onPressed: () => showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    builder: (context) => PeopleSelectPage(),
+                  ),
                   icon: Icon(Icons.person),
-                  label: Text("1명"),
+                  label: Text("인원 선택"),
                   style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                 ),
                 ElevatedButton.icon(
-                  onPressed: () => showBottomSheet(context, MapViewWidget()),
+                  onPressed: () => showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true, // 추가
+                    builder: (context) => MapPage(), // 내부에서 높이를 지정하도록 수정
+                  ),
                   icon: Icon(Icons.map),
                   label: Text("지도보기"),
                   style:

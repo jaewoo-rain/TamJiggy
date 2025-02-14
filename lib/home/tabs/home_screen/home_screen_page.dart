@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:tam_jiggy/home/taps/home_screen/home_screen_bloc.dart';
-import 'package:tam_jiggy/home/taps/home_screen/home_screen_event.dart';
-import 'package:tam_jiggy/home/taps/home_screen/home_screen_state.dart';
-import 'package:tam_jiggy/home/taps/home_screen/widgets/profile_card.dart';
-import 'package:tam_jiggy/home/taps/home_screen/widgets/review_card.dart';
-import 'package:tam_jiggy/home/taps/home_screen/widgets/search_bar.dart';
-import 'package:tam_jiggy/home/taps/home_screen/widgets/travel_card.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/home_screen_bloc.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/home_screen_event.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/home_screen_state.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/widgets/profile_card.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/widgets/review_card.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/widgets/search_bar.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/widgets/travel_card.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

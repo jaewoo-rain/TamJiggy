@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tam_jiggy/home/taps/home_screen/home_screen_page.dart';
+import 'package:tam_jiggy/home/tabs/home_screen/home_screen_page.dart';
 
 void main() {
   runApp(MyApp());
